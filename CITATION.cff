@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated article."
+type: software
+title: "Analysis code: variant-level bypass alterations and outcomes after epidermal growth factor receptor-targeted therapy in molecularly selected metastatic colorectal cancer"
+authors:
+  - family-names: "Li"
+    given-names: "Jianfeng"
+    affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
+  - family-names: "Kong"
+    given-names: "Weirong"
+    affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
+  - family-names: "Qian"
+    given-names: "Liang"
+    affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
+  - family-names: "Kuo"
+    given-names: "Zi Chong"
+    affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
+  - family-names: "Liu"
+    given-names: "Zhichao"
+    affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
+version: "1.0.0"
+date-released: "2026-10-01"
+license: MIT
+repository-code: "https://github.com/jianfeng-lisysu/mcrc-egfr-bypass-mskchord"
