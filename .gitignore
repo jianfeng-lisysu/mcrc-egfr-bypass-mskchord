@@ -1,0 +1,14 @@
+# Never commit source or derived patient-level data
+01_raw_data/
+03_intermediate/
+04_results/
+06_logs_and_audit/
+05_figures/
+07_tables/
+*.csv
+*.rds
+*.tar
+*.RData
+.Rhistory
+.Rproj.user/
+.DS_Store
