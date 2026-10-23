@@ -1,10 +1,10 @@
-# Variant-level bypass alterations and outcomes after EGFR-targeted therapy in molecularly selected metastatic colorectal cancer
+# Variant-level EGFR-bypass alterations and outcomes after anti-EGFR therapy in molecularly selected metastatic colorectal cancer
 
-Analysis code for the manuscript *Variant-Level Bypass Alterations and Outcomes After Epidermal Growth Factor Receptor–Targeted Therapy in Molecularly Selected Metastatic Colorectal Cancer: An Exploratory Real-World Clinicogenomic Study*.
+Analysis code for the manuscript *Variant-Level EGFR-Bypass Alterations and Outcomes After Anti-EGFR Therapy in Molecularly Selected Metastatic Colorectal Cancer*.
 
 ## What this repository contains
 
-R scripts for cohort derivation, the locked genomic exposure definition, the primary and supportive outcome analyses, the exploratory bevacizumab comparator, and all sensitivity and robustness analyses reported in the paper and its supplementary materials.
+R scripts for cohort derivation, the locked genomic exposure definition, the primary and supportive outcome analyses, the exploratory bevacizumab comparator, and all sensitivity and robustness analyses reported in the paper and its supplementary materials, and (from v1.1.0) the literature-based external consistency analysis (Supplementary Table S10, Supplementary Figure S4).
 
 ## What this repository does not contain
 
@@ -36,11 +36,17 @@ Scripts are numbered in execution order. The numbering also records the sequence
 | `16_*`, `16A_*` | Shared specimen-recency stress test; revised Figure 4 |
 | `18_*`, `18A_*` | Supplementary Tables S4, S7 and S8 |
 | `19_*` | Figure 5 relabelling (no model refitted) |
+| `21_literature_consistency_analysis.R` | Literature-based external consistency analysis (added in v1.1.0, post hoc): published HRs pooled with DerSimonian-Laird random effects; writes CSV results, three-line Word tables and Supplementary Figure S4. Uses only published summary estimates; needs no patient-level data |
 
 Two points that the numbering documents:
 
 1. The genomic exposure was constructed and frozen in `06_*` before any survival model was run in `07_*`. This is what the paper means by "locked", as distinct from prospectively preregistered; there is no registered prospective protocol.
 2. The bevacizumab comparator passed an outcome-blind feasibility gate in `14_*` before comparator outcomes were analysed.
+
+## Version history
+
+- v1.1.0 (2026-10-23): added `21_literature_consistency_analysis.R`; no existing script or result changed.
+- v1.0.0 (2026-10-01): initial release.
 
 ## Notes on this release
 
@@ -55,6 +61,7 @@ Two points that the numbering documents:
 - `survival` 3.8.6
 - `data.table` 1.18.4
 - `survRM2` 1.0.4
+- For `21_*` only: `metafor` 5.0-1, `ggplot2` 4.0.3, `patchwork` 1.3.2, `flextable`, `officer`
 
 ## Licence
 
