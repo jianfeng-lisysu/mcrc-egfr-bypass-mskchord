@@ -19,7 +19,7 @@ authors:
     given-names: "Jianfeng"
     affiliation: "Department of Gastrointestinal Surgery, The Seventh Affiliated Hospital of Sun Yat-sen University, Shenzhen, China"
     orcid: "https://orcid.org/0009-0007-5508-3316"
-version: "1.1.0"
-date-released: "2026-10-23"
+version: "1.2.0"
+date-released: "2026-11-24"
 license: MIT
 repository-code: "https://github.com/jianfeng-lisysu/mcrc-egfr-bypass-mskchord"

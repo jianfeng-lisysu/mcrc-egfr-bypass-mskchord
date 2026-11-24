@@ -4,7 +4,7 @@ Analysis code for the manuscript *Variant-Level EGFR-Bypass Alterations and Outc
 
 ## What this repository contains
 
-R scripts for cohort derivation, the locked genomic exposure definition, the primary and supportive outcome analyses, the exploratory bevacizumab comparator, and all sensitivity and robustness analyses reported in the paper and its supplementary materials, and (from v1.1.0) the literature-based external consistency analysis (Supplementary Table S10, Supplementary Figure S4).
+R scripts for cohort derivation, the locked genomic exposure definition, the primary and supportive outcome analyses, the exploratory bevacizumab comparator, and all sensitivity and robustness analyses reported in the paper and its supplementary materials, and (from v1.1.0) the literature-based external consistency analysis (Supplementary Table S10, Supplementary Figure S4), and (from v1.2.0) the reviewer-requested post hoc analyses for the first revision (Supplementary Tables S11–S14, Supplementary Figure S6).
 
 ## What this repository does not contain
 
@@ -37,6 +37,7 @@ Scripts are numbered in execution order. The numbering also records the sequence
 | `18_*`, `18A_*` | Supplementary Tables S4, S7 and S8 |
 | `19_*` | Figure 5 relabelling (no model refitted) |
 | `21_literature_consistency_analysis.R` | Literature-based external consistency analysis (added in v1.1.0, post hoc): published HRs pooled with DerSimonian-Laird random effects; writes CSV results, three-line Word tables and Supplementary Figure S4. Uses only published summary estimates; needs no patient-level data |
+| `22_revision_line_denovo_confounding.R` | Reviewer-requested post hoc analyses for the first revision (added in v1.2.0): registry stage at initial diagnosis with radiology corroboration; prior-treatment-exposure proxies (cytotoxic backbone exposure and a timeline-derived drug-class count; not chart-verified lines of therapy); ECOG and treatment-history sensitivity models; proportional-hazards term diagnostics and panel-stratified refits; extended-propensity overlap weights with a 2,000-resample full estimation-pipeline bootstrap, treatment-by-bypass cell diagnostics and within-stratum balance; E-values. Reads the locked outputs of `07_*` and `14B_*` and the timeline files of the source release; writes Supplementary Tables S11–S14 and Supplementary Figure S6. The locked cohort, exposure definition, endpoints and primary analysis are not changed |
 
 Two points that the numbering documents:
 
@@ -45,6 +46,7 @@ Two points that the numbering documents:
 
 ## Version history
 
+- v1.2.0 (2026-11-24): added `22_revision_line_denovo_confounding.R` (post hoc analyses requested during peer review); no existing script or result changed.
 - v1.1.0 (2026-10-23): added `21_literature_consistency_analysis.R`; no existing script or result changed.
 - v1.0.0 (2026-10-01): initial release.
 
@@ -62,6 +64,7 @@ Two points that the numbering documents:
 - `data.table` 1.18.4
 - `survRM2` 1.0.4
 - For `21_*` only: `metafor` 5.0-1, `ggplot2` 4.0.3, `patchwork` 1.3.2, `flextable`, `officer`
+- For `22_*`: `ggplot2`, `flextable`, `officer`; the bootstrap (2,000 resamples, seed 20261124) takes about a minute
 
 ## Licence
 
